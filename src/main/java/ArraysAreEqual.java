@@ -1,4 +1,7 @@
 //see test cases.
+
+import java.sql.Array;
+
 public class ArraysAreEqual {
     /**
      * Check if two arrays are equal to each other. Return true if all of the values in a are
@@ -15,6 +18,15 @@ public class ArraysAreEqual {
      * @return true if the values of a are equal to the values of b.
      */
     public boolean equal(int[] a, int[] b){
-        return false;
+        if (a.length != b.length){
+            return false;
+        }
+        for ( int i = 0; i < a.length || i < b.length; i++){
+            if (a[i] != b[i]){
+                return false;
+            }
+        }
+
+        return true ;
     }
 }
